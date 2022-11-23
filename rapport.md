@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.1
 kernelspec:
   display_name: C++17
   language: C++17
@@ -25,10 +25,9 @@ affirmez.*
 
 +++
 
-## Auteurs
+## Auteur
 
-- Nom, prénom, courriel, groupe
-- Nom, prénom, courriel, groupe
+- Pras Baptiste, baptiste.pras@universite-paris-saclay.fr
 
 +++
 
@@ -87,4 +86,3 @@ de vos enseigants), précisez le.*
 *Décrire en quelques phrases les difficultés rencontrées, ce que vous
 avez appris à l'occasion du projet, le cas échéant comment vous vous y
 prendriez si vous aviez à le refaire.*
-

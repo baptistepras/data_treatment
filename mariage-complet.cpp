@@ -20,8 +20,17 @@ vector<string> jours = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Same
  * case d'indice i, on trouve le nombre total de mariages de l'année 2010+i
  **/
 vector<int> litTableauAnnee(string nom_fichier) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction litTableauAnnee non implantée ligne 24");
+    ifstream fichier;
+    fichier.open(nom_fichier);
+    vector<int> tableau_annee = {0, 0, 0, 0, 0, 0};
+    int annee;
+    string valeur;
+    while (fichier) {
+        fichier >> annee >> valeur >> valeur;  // on ne garde que la valeur des colonnes "annee" et "nombre"
+        if (fichier)
+            tableau_annee[annee - 2010] += stoi(valeur); // convertis la valeur de la colonne "nombre" d'un string à un int
+    }
+    return tableau_annee;
 }
 
 /** Test de la fonction litTableauAnnee **/
@@ -61,8 +70,17 @@ void testIndiceJour() {
  * case d'indice i, on trouve le nombre total de mariages célébrés le jour i
  **/
 vector<int> litTableauJours(string nom_fichier) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction litTableauJours non implantée ligne 65");
+    ifstream fichier;
+    fichier.open(nom_fichier);
+    vector<int> tableau_jour = {0, 0, 0, 0, 0, 0, 0};
+    int valeur;
+    string jour;
+    while (fichier) {
+        fichier >> valeur >> jour >> valeur;  // on ne garde que la valeur des colonnes "jour" et "nombre"
+        if (fichier)
+            tableau_jour[indiceJour(jour)] += valeur;
+    }
+    return tableau_jour;
 }
 
 /** Test de la fonction litTableauJours **/
@@ -78,8 +96,10 @@ void testLitTableauJours() {
  * @return la somme des valeurs du tableau
  **/
 int somme(vector<int> t) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction somme non implantée ligne 82");
+    int somme = 0;
+    for (int i = 0; i < t.size(); i++)
+        somme += t[i];
+    return somme;
 }
 
 /** Test de la fonction somme **/
@@ -95,8 +115,10 @@ void testSomme() {
  * (on arrondit à l'entier inférieur)
  **/
 int moyenne(vector<int> t) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction moyenne non implantée ligne 99");
+    int somme = 0;
+    for (int i = 0; i < t.size(); i++)
+        somme += t[i];
+    return somme / t.size();
 }
 
 /** Test de la fonction moyenne **/
@@ -112,8 +134,15 @@ void testMoyenne() {
  * @return l'indice de la valeur maximale ou -1 si le tableau est vide
  **/
 int indiceMax(vector<int> t) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction indiceMax non implantée ligne 116");
+    int max = -1;
+    int indice_max = -1;
+    for (int i = 0; i < t.size(); i++) {
+        if (t[i] > max) {  // si deux valeurs sont égales, on gardera l'indice de la première trouvée
+            max = t[i];
+            indice_max = i;
+        }
+    }
+    return indice_max;
 }
 
 /** Test de la fonction IndiceMax **/
@@ -133,7 +162,21 @@ void testIndiceMax() {
  * - le pourcentage de mariages célébrés un samedi
  **/
 int main() {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction main non implantée ligne 137");
+    testLitTableauAnnee();
+    testLitTableauJours();
+    testSomme();
+    testMoyenne();
+    testIndiceMax();
+    
+    vector<int> tableau_annee = litTableauAnnee("donnees/statistiques-des-jours-des-mariages.txt");
+    vector<int> tableau_jour = litTableauJours("donnees/statistiques-des-jours-des-mariages.txt");
+    cout << "Le nombre total de mariages célébrés entre 2010 et 2015 est de " << somme(tableau_annee) << endl;
+    cout << "Le nombre moyen de mariages célébrés par an est de " << moyenne(tableau_annee) << endl;
+    cout << "L'année où l'on a célébré le plus de mariages est " << indiceMax(tableau_annee) + 2010 << " avec " << tableau_annee[indiceMax(tableau_annee)] << " mariages" << endl;
+    cout << "Le jour de la semaine où l'on a célébré le plus de mariages est le " << jours[indiceMax(tableau_jour)] << " avec " << tableau_jour[indiceMax(tableau_jour)] << " mariages" << endl;
+    float valeur_samedi = tableau_jour[5];
+    cout << "Le pourcentage de mariages célébrés le samedi est de " << 100 * (valeur_samedi / somme(tableau_jour)) << "%" << endl;
+
+    return 0;
 }
 

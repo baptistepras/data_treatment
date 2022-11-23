@@ -4,9 +4,9 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.1
 kernelspec:
-  display_name: Python 3 (ipykernel)
+  display_name: Python 3
   language: python
   name: python3
 ---
@@ -25,3 +25,20 @@ travailler le projet Données Libres.
 - [Squelette de rapport](rapport.md)
 - Données (dans le sous-répertoire `donnees`)
 
++++
+
+Commandes de compilation:
+info-111 g++ mariage-total.cpp -o mariage-total
+info-111 g++ mariage-samedi.cpp -o mariage-samedi
+info-111 g++ mariage-complet.cpp -o mariage-complet
+info-111 g++ prenoms.cpp -o prenoms
+info-111 g++ prenoms-tableau.cpp -o prenoms-tableau
+
++++
+
+Commandes d'exécution:
+./mariage-total
+./mariage-samedi
+./mariage-complet
+./prenoms
+./prenoms-tableau
