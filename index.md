@@ -33,7 +33,9 @@ info-111 g++ mariage-samedi.cpp -o mariage-samedi
 info-111 g++ mariage-complet.cpp -o mariage-complet
 info-111 g++ prenoms.cpp -o prenoms
 info-111 g++ prenoms-tableau.cpp -o prenoms-tableau
-info-111 g++ tableau-donnees-test.cpp -o tableau-donnees-test
+make tableau-donnees-test
+make tableau-lecture-test
+make prenoms-tableau-2
 
 +++
 
@@ -43,3 +45,6 @@ Commandes d'exécution:
 ./mariage-complet
 ./prenoms
 ./prenoms-tableau
+./tableau-donnees-test
+./tableau-lecture-test
+./prenoms-tableau-2
