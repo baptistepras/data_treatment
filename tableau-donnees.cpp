@@ -5,39 +5,65 @@
 #include "tableau-donnees.hpp"
 
 void afficheTableau(vector<vector<string>> tableau) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction afficheTableau non implantée ligne 9");
+    for (int i = 0; i < tableau.size(); i++) {
+        for (int j = 0; j < tableau[i].size(); j++) {
+            if (j != 0)  // évite d'avoir un espace en plus à la fin de la ligne
+                cout << " ";
+            cout << tableau[i][j];
+        }
+        cout << endl;
+    }
 }
 
 int moyenne(vector<int> t) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction moyenne non implantée ligne 14");
+    int somme = 0;
+    for (int i = 0; i < t.size(); i++)
+        somme += t[i];
+    return somme / t.size();
 }
 
 int somme(vector<int> t) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction somme non implantée ligne 19");
+    int somme = 0;
+    for (int i = 0; i < t.size(); i++)
+        somme += t[i];
+    return somme;
 }
 
 
 int indiceMax(vector<int> t) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction indiceMax non implantée ligne 25");
+    int max = -1;
+    int indice_max = -1;
+    for (int i = 0; i < t.size(); i++) {
+        if (t[i] > max) {  // si deux valeurs sont égales, on gardera l'indice de la première trouvée
+            max = t[i];
+            indice_max = i;
+        }
+    }
+    return indice_max;
 }
 
 vector<string> colonne(vector<vector<string>> t, int j) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction colonne non implantée ligne 30");
+    vector<string> tableau;
+    for (int i = 0; i < t.size(); i++)
+        tableau.push_back(t[i][j]);
+    return tableau;
 }
 
 
 vector<int> conversionInt(vector<string> t) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction conversionInt non implantée ligne 36");
+    vector<int> resultat = vector<int>(t.size());
+    for(int i =0; i < t.size(); i++) {
+        istringstream(t[i]) >> resultat[i];
+    }
+    return resultat;
 }
 
 vector<vector<string>> selectLignes(vector<vector<string>> t, int j, string valeur) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction selectLignes non implantée ligne 41");
+    vector<vector<string>> tableau;
+    for (int i = 0; i < t.size(); i++) {
+        if (t[i][j] == valeur)
+            tableau.push_back(t[i]);
+    }
+    return tableau;
 }
 

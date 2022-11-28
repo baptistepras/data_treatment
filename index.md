@@ -33,6 +33,7 @@ info-111 g++ mariage-samedi.cpp -o mariage-samedi
 info-111 g++ mariage-complet.cpp -o mariage-complet
 info-111 g++ prenoms.cpp -o prenoms
 info-111 g++ prenoms-tableau.cpp -o prenoms-tableau
+info-111 g++ tableau-donnees-test.cpp -o tableau-donnees-test
 
 +++
 

@@ -26,13 +26,13 @@ void testMoyenne() {
 }
 
 void testSomme() {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction testSomme non implantée ligne 30");
+    CHECK(somme(c) == 15);
+    CHECK(somme({}) == 0);
 }
 
 void testIndiceMax() {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction testIndiceMax non implantée ligne 35");
+    CHECK(indiceMax(c) == 1);
+    CHECK(indiceMax({}) == -1);
 }
 
 void testColonne() {
@@ -68,5 +68,6 @@ int main() {
     testConversionInt();
     cout << "Lancement des tests de selectLignes" << endl;
     testSelectLignes();
+    return -1;
 }
 
