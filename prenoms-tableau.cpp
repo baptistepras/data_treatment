@@ -59,6 +59,7 @@ vector<vector<string>> litTableau(string nom_fichier, int nb_colonnes) {
     vector<vector<string>> new_tableau;
     for (int i = 0; i < tableau.size() -1; i++)  // permet d'enlever la dernière ligne du fichier qui apparaît 2x
         new_tableau.push_back(tableau[i]);
+    fichier.close();
     return new_tableau;
 }
 

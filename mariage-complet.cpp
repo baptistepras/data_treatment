@@ -30,6 +30,7 @@ vector<int> litTableauAnnee(string nom_fichier) {
         if (fichier)
             tableau_annee[annee - 2010] += stoi(valeur); // convertis la valeur de la colonne "nombre" d'un string à un int
     }
+    fichier.close();
     return tableau_annee;
 }
 
@@ -80,6 +81,7 @@ vector<int> litTableauJours(string nom_fichier) {
         if (fichier)
             tableau_jour[indiceJour(jour)] += valeur;
     }
+    fichier.close();
     return tableau_jour;
 }
 
