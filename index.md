@@ -36,6 +36,7 @@ info-111 g++ prenoms-tableau.cpp -o prenoms-tableau
 make tableau-donnees-test
 make tableau-lecture-test
 make prenoms-tableau-2
+make mariage-complet-2
 
 +++
 
@@ -48,3 +49,4 @@ Commandes d'exécution:
 ./tableau-donnees-test
 ./tableau-lecture-test
 ./prenoms-tableau-2
+./mariage-complet-2
