@@ -206,15 +206,15 @@ int main() {
     }
 
     if (garcon > 0) {
-        cout << "Le prénom " << prenom << " a été donné à " << garcon << " garçons entre 2006 et 2021" << endl;
+        cout << "Le prénom " << prenom << " a été donné à " << garcon << " garçons entre 2004 et 2021" << endl;
         cout << "L'année la plus forte est " << annee_max_garcon << " avec " << max_garcon << " enfants" << endl;
     } else
-        cout << "Le prénom " << prenom << " n'a été donné à aucun garcon entre 2006 et 2021" << endl;
+        cout << "Le prénom " << prenom << " n'a été donné à aucun garcon entre 2004 et 2021" << endl;
     if (fille > 0) {
-        cout << "Le prénom " << prenom << " a été donné à " << fille << " filles entre 2006 et 2021" << endl;
+        cout << "Le prénom " << prenom << " a été donné à " << fille << " filles entre 2004 et 2021" << endl;
         cout << "L'année la plus forte est " << annee_max_fille << " avec " << max_fille << " enfants" << endl;
     } else
-        cout << "Le prénom " << prenom << " n'a été donné à aucune fille entre 2006 et 2021" << endl;
+        cout << "Le prénom " << prenom << " n'a été donné à aucune fille entre 2004 et 2021" << endl;
 
     return 0;
 }

@@ -2,7 +2,6 @@
 /** @file **/
 #include <fstream>
 #include <sstream>
-#include <iostream>
 #include "tableau-donnees-avance.hpp"
 
 int chercheIndice(vector<string> t, string valeur) {
@@ -15,7 +14,7 @@ int chercheIndice(vector<string> t, string valeur) {
 
 vector<string> distinct(vector<vector<string>> data, int j) {
     vector<string> tableau;
-    for (vector<string> tab : data) {
+    for (vector<string> tab : data) { // pour chaque ligne du tableau si la valeur n'a pas déjà été ajoutée
         if (chercheIndice(tableau, tab[j]) == -1)
             tableau.push_back(tab[j]);
     }
@@ -34,12 +33,25 @@ vector<int> groupByInt(vector<vector<string>> data, vector<string> valeurs, int 
     vector<int> tableau = vector<int>(valeurs.size());
     for (int i = 0; i < tableau.size(); i++)
         tableau[i] = 0;
+    for (vector<string> tab : data) { // pour chaque ligne du tableau, on récupère l'indice de la valeur dans j1
+        int val = chercheIndice(valeurs, tab[j1]);
+        if (val >= 0)
+            tableau[val] += stoi(tab[j2]); // converti un string en entier
+    }
     return tableau;
 }
 
 vector<double> groupByDouble(vector<vector<string>> data, vector<string> valeurs, int j1, int j2) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction groupByDouble non implantée ligne 29");
+    vector<double> tableau = vector<double>(valeurs.size());
+    for (int i = 0; i < tableau.size(); i++)
+        tableau[i] = 0;
+    for (vector<string> tab : data) { // pour chaque ligne du tableau, on récupère l'indice de la valeur dans j1
+        int val = chercheIndice(valeurs, tab[j1]);
+        vector<double> tab_double = conversionDouble(tab);
+        if (val >= 0)
+            tableau[val] += tab_double[j2];
+    }
+    return tableau;
 }
 
 template<class T>

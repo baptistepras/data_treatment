@@ -8,11 +8,11 @@ using namespace std;
 /** Calcule et affiche le prénom le plus utilisé une année donnée
  * ainsi que le nombre de naissances cette année là **/
 int main() {
-    cout << "Entrez une année entre 2006 et 2021: ";
+    cout << "Entrez une année entre 2004 et 2021: ";
     int annee;
     cin >> annee;
-    while (not(2006 <= annee and annee <= 2021)) {  // assure la bonne valeur de la variable "année"
-        cout << "Entrez une année entre 2006 et 2021: ";
+    while (not(2004 <= annee and annee <= 2021)) {  // assure la bonne valeur de la variable "année"
+        cout << "Entrez une année entre 2004 et 2021: ";
         cin >> annee;
         if (!cin) {  // Solution de Lucas Hermier-Gastineau pour éviter une boucle infinie si cin != int
             cin.clear();
@@ -37,7 +37,8 @@ int main() {
                 max = valeur;
                 prenom_max = prenom;
             }
-        }
+        } else
+            fichier >> prenom >> valeur;
     }
     fichier.close();
     cout << "En " << annee << ", il y a eu " << naissances << " naissances" << endl;

@@ -38,6 +38,10 @@ make tableau-lecture-test
 make prenoms-tableau-2
 make mariage-complet-2
 make tableau-donnees-avance-test
+make mariage-complet-3
+make prenoms-tableau-avance
+info-111 g++ prenoms-csv.cpp -o prenoms.csv
+make tableau-lecture-csv-test
 
 +++
 
@@ -52,3 +56,7 @@ Commandes d'exécution:
 ./prenoms-tableau-2
 ./mariage-complet-2
 ./tableau-donnees-avance-test
+./mariage-complet-3
+./prenoms-tableau-avance
+./prenoms-csv
+./tableau-lecture-csv-test
