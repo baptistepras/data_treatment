@@ -16,11 +16,15 @@ vector<vector<string>> litTableauCSV(string nom_fichier, int nb_colonnes) {
     vector<vector<string>> tableau;
     while (fichier) {
         tableau.push_back({});
-        for (int i = 0; i < nb_colonnes - 1; i++) {
+        for (int i = 0; i < nb_colonnes - 1; i++) { // on prend toutes les colonnes sauf la dernière 
             getline(fichier, valeur, ';');
             tableau[ligne].push_back(valeur);
         }
-        getline(fichier, valeur);
+        getline(fichier, valeur); // dernière colonne
+        // gestion des fichiers windows sous Linux prise dans le fichier en_cas_d_urgence_briser_la_vitre
+        // la chaîne de caractère de la dernière case comprend un retour à la ligne qu'il faut enlever ?
+        if (valeur.size() > 0 and valeur[valeur.length() - 1] == '\r' )
+            valeur.resize(valeur.length() - 1);
         tableau[ligne].push_back(valeur);
         ligne++;
     }
