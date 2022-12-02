@@ -2,26 +2,39 @@
 /** @file **/
 #include <fstream>
 #include <sstream>
+#include <iostream>
 #include "tableau-donnees-avance.hpp"
 
 int chercheIndice(vector<string> t, string valeur) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction chercheIndice non implantée ligne 9");
+    for (int i = 0; i < t.size(); i++) {
+        if (t[i] == valeur) // renvoie la première occurence même si la valeur est présente plusieurs fois
+            return i;
+    }
+    return -1;
 }
 
 vector<string> distinct(vector<vector<string>> data, int j) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction distinct non implantée ligne 14");
+    vector<string> tableau;
+    for (vector<string> tab : data) {
+        if (chercheIndice(tableau, tab[j]) == -1)
+            tableau.push_back(tab[j]);
+    }
+    return tableau;
 }
 
 vector<double> conversionDouble(vector<string> t) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction conversionDouble non implantée ligne 19");
+    vector<double> resultat = vector<double>(t.size());
+    for(int i = 0; i < t.size(); i++) {
+        istringstream(t[i]) >> resultat[i];
+    }
+    return resultat;
 }
 
 vector<int> groupByInt(vector<vector<string>> data, vector<string> valeurs, int j1, int j2) {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction groupByInt non implantée ligne 24");
+    vector<int> tableau = vector<int>(valeurs.size());
+    for (int i = 0; i < tableau.size(); i++)
+        tableau[i] = 0;
+    return tableau;
 }
 
 vector<double> groupByDouble(vector<vector<string>> data, vector<string> valeurs, int j1, int j2) {

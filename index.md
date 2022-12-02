@@ -37,6 +37,7 @@ make tableau-donnees-test
 make tableau-lecture-test
 make prenoms-tableau-2
 make mariage-complet-2
+make tableau-donnees-avance-test
 
 +++
 
@@ -50,3 +51,4 @@ Commandes d'exécution:
 ./tableau-lecture-test
 ./prenoms-tableau-2
 ./mariage-complet-2
+./tableau-donnees-avance-test

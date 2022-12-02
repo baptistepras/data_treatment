@@ -52,7 +52,7 @@ vector<string> colonne(vector<vector<string>> t, int j) {
 
 vector<int> conversionInt(vector<string> t) {
     vector<int> resultat = vector<int>(t.size());
-    for(int i =0; i < t.size(); i++) {
+    for(int i = 0; i < t.size(); i++) {
         istringstream(t[i]) >> resultat[i];
     }
     return resultat;
