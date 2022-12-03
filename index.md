@@ -46,6 +46,7 @@ make arbres-hauteur
 make arbres-platanus
 make actes-civils
 make voitures
+make objets-trouves
 
 +++
 
@@ -68,3 +69,4 @@ Commandes d'exécution:
 ./arbres-platanus
 ./actes-civils
 ./voitures
+./objets-trouves

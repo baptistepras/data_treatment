@@ -99,6 +99,11 @@ kernelspec:
                fichier csv. De plus, il a fallu trouver et identifier à la main les véhicules à éliminer du 
                tableau afin d'éliminer les consommations nulles.
 
+- Exercice 12: entièremment complété, compile et fonctionne correctement
+               Donne la gare comptant le plus de parapluies perdus à partir du fichier objets-trouves de 
+               la SNCF. J'ai choisi de prendre seulement les lignes de parapluies, puis de compter 
+               combien de lignes correspondaient à chaque gare en utilisant les fonctions existantes
+
 +++
 
 ## Démonstration
@@ -151,6 +156,7 @@ make arbres-hauteur
 make arbres-platanus
 make actes-civils
 make voitures
+make objets-trouves
 
 Commandes d'exécution:
 ./mariage-total
@@ -171,6 +177,7 @@ Commandes d'exécution:
 ./arbres-platanus
 ./actes-civils
 ./voitures
+./objets-trouves
 
 +++ {"tags": [], "jp-MarkdownHeadingCollapsed": true}
 
