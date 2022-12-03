@@ -77,7 +77,7 @@ kernelspec:
               J'ai ici choisi de récupérer toutes les lignes où le genre était "Platanus" grâce à selectLignes(), 
               puis avec distinct() de créer une liste avec toutes les espèces différentes pour les lignes 
               préalablements extraites
-              actes-civils compile mais l'appel de la fonction litTableauCSV renvoie une segmentation fault. Je suis 
+              actes-civils compile mais l'appel de la fonction litTableauCSV() renvoie une segmentation fault. Je suis 
               assez convaincu du fonctionnement du reste de la fonction qui d'abord récupère toutes les lignes liées 
               aux naissances et aux mariages, puis parcours ces lignes pour additionner à chaque année le nombre de 
               naissances ou mariages et trouver le total par année
@@ -109,6 +109,22 @@ kernelspec:
                des fonctions déjà implantées précédemment et du fichier du trafic par station fourni par 
                la RATP
 
+- Exercice 15: entièremment complété, compile et fonctionne correctement
+               A partir du jeu de données des subventions demandées à la Mairie de Paris et le montant 
+               accordé, on détermine à l'aide des fonctions déjà implantées l'association ayant reçu le 
+               plus d'argent de la Mairie de Paris et le budget total de la Mairie dans le milieu 
+               associatif
+               Le tableau CSV proposé a posé problèmes car sur les quelques 84 000 lignes, il y avait 
+               presque 130 000 point-virgules dans les noms des associations et descriptions, décalant 
+               toutes les cas et cause des erreurs critiques. J'ai donc dû (avec la précieuse aide de 
+               Cmd+F) remplacer tous ces point-virgules par des espaces.
+               De plus, le montant total des subventions dépassait la capacité d'un int, il a donc fallu 
+               régler ce problème-ci pour éviter d'avoir quelque chose d'incohérent (résultat négatif).
+               Une autre application intéressante du traitement de données pourrait être de récupérer 
+               en temps réel sur RTE les données de production et de consommation électrique pour se 
+               faire une alerte sur son téléphone des risques de coupure. On pourrait alors avec un 
+               système autonome (Alexa, Google Home etc...) couper certains de nos appareils.
+
 +++
 
 ## Démonstration
@@ -118,7 +134,7 @@ Je souhaiterais montrer les programmes suivants:
               tant dans la façon de créer les fonctions pour lire les tableaux que dans l'application de ces 
               dernières pour en ressortir les données voulues
 - Exercice 9: les programmes arbres-platanus et arbres-hauteur qui fonctionnent sont un bon exemple d'application de 
-              toutes nos fonctions précédemment créées. Le programme actes-civils, bien qu'ayant une erreur, est 
+              toutes nos fonctions précédemment créées. Le programme actes-civils, bien qu'ayant une erreur identifiée, est 
               aussi un très bon exemple d'une manipulation plus complexe liée à un tableau avec plus de données
   
 - Exercice 11: exercice le plus difficile m'ayant été donnée de faire dans ce TP pour ma part. Il permet 
@@ -131,7 +147,39 @@ Je souhaiterais montrer les programmes suivants:
 ```
 
 ```{code-cell}
+! rm voitures
+```
+
+```{code-cell}
+! rm objets-trouves
+```
+
+```{code-cell}
+! rm metro
+```
+
+```{code-cell}
+! rm subventions
+```
+
+```{code-cell}
 ! make all
+```
+
+```{code-cell}
+! make voitures
+```
+
+```{code-cell}
+! make objets-trouves
+```
+
+```{code-cell}
+! make metro
+```
+
+```{code-cell}
+! make subventions
 ```
 
 ```{code-cell}
@@ -141,8 +189,19 @@ Je souhaiterais montrer les programmes suivants:
 ```
 
 ```{code-cell}
+! ./tableau-donnees-test
+```
+
+```{code-cell}
+! ./tableau-lecture-test
+```
+
+```{code-cell}
+! ./tableau-lecture-csv-test
+```
+
+```{code-cell}
 // exercice 6
-! make tableau-donnees-avance-test
 ```
 
 ```{code-cell}
@@ -150,15 +209,9 @@ Je souhaiterais montrer les programmes suivants:
 ```
 
 ```{code-cell}
-! make mariage-complet-3
-```
+:tags: []
 
-```{code-cell}
 ! ./mariage-complet-3
-```
-
-```{code-cell}
-! make prenoms-tableau-avance
 ```
 
 ```{code-cell}
@@ -167,7 +220,6 @@ Je souhaiterais montrer les programmes suivants:
 
 ```{code-cell}
 // exercice 9
-! make arbres-hauteur
 ```
 
 ```{code-cell}
@@ -175,23 +227,58 @@ Je souhaiterais montrer les programmes suivants:
 ```
 
 ```{code-cell}
-! make arbres-platanus
-```
-
-```{code-cell}
 ! ./arbres-platanus
 ```
 
 ```{code-cell}
+! ./actes-civils
+```
+
+```{code-cell}
+// Segmentation fault dans actes-civils, liée à l'utilisation de la fonction litTableauCSV
+// commandes pour lire le rapport d'erreur
+```
+
+gdb actes-civils
+core core.191763
+where full
+list
+quit
+
+```{code-cell}
 // exercice 11
-! make voitures
 ```
 
 ```{code-cell}
 ! ./voitures
 ```
 
-Raccourcis pour toutes les commandes dans le terminal
+```{code-cell}
+// exercice 12
+```
+
+```{code-cell}
+! ./objets-trouves
+```
+
+```{code-cell}
+// exercice 13
+```
+
+```{code-cell}
+! ./metro
+```
+
+```{code-cell}
+// exercice 15
+```
+
+```{code-cell}
+! ./subventions
+```
+
+Raccourcis pour toutes les commandes dans le terminal:
+cd ProgImperative/Projet-DonneesLibres
 
 Commandes de compilation:
 info-111 g++ mariage-total.cpp -o mariage-total
@@ -214,6 +301,7 @@ make actes-civils
 make voitures
 make objets-trouves
 make metro
+make subventions
 
 Commandes d'exécution:
 ./mariage-total
@@ -236,12 +324,13 @@ Commandes d'exécution:
 ./voitures
 ./objets-trouves
 ./metro
+./subventions
 
 +++ {"tags": [], "jp-MarkdownHeadingCollapsed": true}
 
 ## Organisation du travail
 
-Le nombre d'heures passées sur le projet doit être compris entre 20h et 30h environ.
+Le nombre d'heures passées sur le projet doit être d'environ 20 à 30h.
 J'ai majoritairement travaillé depuis chez moi, me permettant une meilleure concentration tout en éviter de travailler trop en ayant un accès proche à des en-cas, à boire, toilettes et activités pour se reposer entre deux programmes si besoin (lit, vidéo, canapé, balade etc...).
 J'ai préféré travailler seul car le projet étant petit et pas trop compliqué, j'estime avancer plus vite et plus efficacement seul qu'à plusieurs, notamment que ne connaissant pas très bien la façon de coder de mes amis, l'adaptation aurait pris du temps. Je préfère travailler en groupe seulement sur les gros projets et avec quelqu'un donc je connais la façon de programmer.
 J'ai, pour un soucis de propreté de mon code, eu l'aide d'un camarade pour une sorte d'assertion sur les cin dans les fichiers prenoms.cpp et prenoms-csv.cpp (comme écrit à côté du morceau en question dans ces fichiers).

@@ -27,6 +27,10 @@ travailler le projet Données Libres.
 
 +++
 
+cd ProgImperative/Projet-DonneesLibres
+
++++
+
 Commandes de compilation:
 info-111 g++ mariage-total.cpp -o mariage-total
 info-111 g++ mariage-samedi.cpp -o mariage-samedi
@@ -48,6 +52,7 @@ make actes-civils
 make voitures
 make objets-trouves
 make metro
+make subventions
 
 +++
 
@@ -72,3 +77,4 @@ Commandes d'exécution:
 ./voitures
 ./objets-trouves
 ./metro
+./subventions
