@@ -140,6 +140,57 @@ Je souhaiterais montrer les programmes suivants:
 // fonctionnent si on les exécute un par un avec les commandes ci-dessous
 ```
 
+```{code-cell}
+// exercice 6
+! make tableau-donnees-avance-test
+```
+
+```{code-cell}
+! ./tableau-donnees-avance-test
+```
+
+```{code-cell}
+! make mariage-complet-3
+```
+
+```{code-cell}
+! ./mariage-complet-3
+```
+
+```{code-cell}
+! make prenoms-tableau-avance
+```
+
+```{code-cell}
+! ./prenoms-tableau-avance
+```
+
+```{code-cell}
+// exercice 9
+! make arbres-hauteur
+```
+
+```{code-cell}
+! ./arbres-hauteur
+```
+
+```{code-cell}
+! make arbres-platanus
+```
+
+```{code-cell}
+! ./arbres-platanus
+```
+
+```{code-cell}
+// exercice 11
+! make voitures
+```
+
+```{code-cell}
+! ./voitures
+```
+
 Raccourcis pour toutes les commandes dans le terminal
 
 Commandes de compilation:
@@ -155,7 +206,7 @@ make mariage-complet-2
 make tableau-donnees-avance-test
 make mariage-complet-3
 make prenoms-tableau-avance
- make prenoms-csv
+make prenoms-csv
 make tableau-lecture-csv-test
 make arbres-hauteur
 make arbres-platanus
