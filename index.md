@@ -45,6 +45,7 @@ make tableau-lecture-csv-test
 make arbres-hauteur
 make arbres-platanus
 make actes-civils
+make voitures
 
 +++
 
@@ -66,3 +67,4 @@ Commandes d'exécution:
 ./arbres-hauteur
 ./arbres-platanus
 ./actes-civils
+./voitures

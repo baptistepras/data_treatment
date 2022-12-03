@@ -82,6 +82,23 @@ kernelspec:
               aux naissances et aux mariages, puis parcours ces lignes pour additionner à chaque année le nombre de 
               naissances ou mariages et trouver le total par année
 
+- Exercice 11: entièremment complété, compile et fonctionne correctement
+               La fonction main se sert des fonctions précédemment implémentées, plus de 4 nouvelles 
+               pour donner le véhicule le plus et moins gourmand en essence selon le type de trajet, 
+               ainsi que la marque faisant les véhicules les plus et moins gourmands en moyenne pour 
+               chaque type de trajet.
+               Nouvelles fonctions: - indiceMaxDouble et indiceMinDouble (similaires à indiceMax)
+                                    - moyenneElements, fait la moyenne de chaque élément d'un tableau
+                                    - litTableauCSV a un peu été modifiée pour pouvoir lire dans ce 
+                                      tableau uniquement le type de carburant et ainsi éliminer les 
+                                      voitures dont la consommation serait nulle (électrique etc...) 
+                                      pour avoir un traitement de données plus pertinent
+               L'exercice est celui qui m'a posé le plus de problèmes d'une part à cause du nombre de 
+               données différentes à traiter dans ce tableau et d'autre part à cause du manque de 
+               certaines données que l'on peut retrouver, mais qui ne se lisent pas directement dans le 
+               fichier csv. De plus, il a fallu trouver et identifier à la main les véhicules à éliminer du 
+               tableau afin d'éliminer les consommations nulles.
+
 +++
 
 ## Démonstration
@@ -93,6 +110,11 @@ Je souhaiterais montrer les programmes suivants:
 - Exercice 9: les programmes arbres-platanus et arbres-hauteur qui fonctionnent sont un bon exemple d'application de 
               toutes nos fonctions précédemment créées. Le programme actes-civils, bien qu'ayant une erreur, est 
               aussi un très bon exemple d'une manipulation plus complexe liée à un tableau avec plus de données
+  
+- Exercice 11: exercice le plus difficile m'ayant été donnée de faire dans ce TP pour ma part. Il permet 
+               de montrer une application complexe de tout un tas de données dans un tableau, ainsi que 
+               la création de nouvelles données qu'on juge manquantes et de vérifier la pertinence des 
+               données que l'on récupère pour éviter d'avoir un résultat inintéressant
 
 ```{code-cell}
 ! make clean
@@ -128,6 +150,7 @@ make tableau-lecture-csv-test
 make arbres-hauteur
 make arbres-platanus
 make actes-civils
+make voitures
 
 Commandes d'exécution:
 ./mariage-total
@@ -147,6 +170,7 @@ Commandes d'exécution:
 ./arbres-hauteur
 ./arbres-platanus
 ./actes-civils
+./voitures
 
 +++ {"tags": [], "jp-MarkdownHeadingCollapsed": true}
 
