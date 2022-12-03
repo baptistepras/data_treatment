@@ -5,7 +5,10 @@
 #include <string>
 using namespace std;
 
-/** Calcule et affiche le nombre de mariages un samedi entre 2010 et 2015 **/
+/** Calcule et affiche le nombre de mariages un samedi entre 2010 et 2015 
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
+**/
 int main() {
     ifstream fichier;
     fichier.open("donnees/statistiques-des-jours-des-mariages.txt");

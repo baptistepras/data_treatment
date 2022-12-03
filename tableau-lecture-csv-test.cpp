@@ -48,11 +48,11 @@ int main() {
     afficheTableau(t);
     cout << "Lancement des tests de litTableauCSVAvecColonnes" << endl;
     testLitTableauCSVAvecColonnes();
-    cout << "Lecture d'un petit tableau avec litTableauCSV (sans colonnes)" << endl;
-    t = litTableauCSV("donnees/donnees-test.csv");
-    afficheTableau(t);
-    cout << "Lancement des tests de litTableauCSVSansColonnes" << endl;
-    testLitTableauCSVSansColonnes();
+    // cout << "Lecture d'un petit tableau avec litTableauCSV (sans colonnes)" << endl;
+    // t = litTableauCSV("donnees/donnees-test.csv");
+    // afficheTableau(t);
+    // cout << "Lancement des tests de litTableauCSVSansColonnes" << endl;
+    // testLitTableauCSVSansColonnes();
     return 0;
 }
 

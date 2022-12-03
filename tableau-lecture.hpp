@@ -10,6 +10,8 @@ using namespace std;
  * de colonnes séparées par des espaces
  * @param nb_colonnes le nombre de colonnes du fichier
  * @return un tableau de chaines de caractères à deux dimensions
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 vector<vector<string>> litTableau(string nom_fichier, int nb_colonnes);
 

@@ -11,6 +11,8 @@ using namespace std;
  * Demande à l'utilisateur un prénom et calcule
  * - le nombre de garçons et filles à qui l'on a donné ce prénom
  * - la meilleure année pour ce prénom pour les garçons et filles
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 int main() {
     cout << "Nombre total de naissances: " << somme(conversionInt(colonne(litTableau("donnees/liste_des_prenoms.txt", 4), 3))) << endl;

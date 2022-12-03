@@ -7,7 +7,10 @@
 using namespace std;
 
 /** Calcule et affiche le prénom le plus donné une année donnée
- * ainsi que le nombre de naissance cette année là **/
+ * ainsi que le nombre de naissance cette année là 
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
+**/
 int main() {
     cout << "Entrez une année entre 2004 et 2021: ";
     int annee;
@@ -15,10 +18,11 @@ int main() {
     while (not(2004 <= annee and annee <= 2021)) {  // assure la bonne valeur de la variable "année"
         cout << "Entrez une année entre 2004 et 2021: ";
         cin >> annee;
-        if (!cin) {  // Solution de Lucas Hermier-Gastineau pour éviter une boucle infinie si cin != int
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        }
+        // fonctionne si on compile avec info-111 g++ mais pas avec make
+        //if (!cin) {  // Solution de Lucas Hermier-Gastineau pour éviter une boucle infinie si cin != int
+            //cin.clear();
+            //cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        //}
     }
     
     ifstream fichier;

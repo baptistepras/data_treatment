@@ -8,9 +8,15 @@ using namespace std;
 
 /** Affiche le nombre d'arbres du genre Platanus, et le nombre d'espèces
  *  différentes pour ce genre Platanus, parmi les "arbres remarquables"
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 int main() {
-    // Remplacer cette ligne et la suivante par le code adéquat
-    throw runtime_error("Fonction main non implantée ligne 14");
+    vector<vector<string>> data = litTableauCSV("donnees/arbresremarquablesparis.csv", 19);
+    vector<vector<string>> lignes_platanes = selectLignes(data, 2, "Platanus");
+    vector<string> especes = distinct(lignes_platanes, 3);
+    cout << "Il y a " << lignes_platanes.size() << " arbres de genre Platanus à Paris et il existe " << especes.size() << " espèces différentes pour ce genre" << endl;
+
+    return 0;
 }
 

@@ -16,6 +16,8 @@ using namespace std;
  * - le nombre de naissances en moyenne par an
  * - les nombres de prénoms féminins et masculins différents
  * - le prénom masculin et le prénom féminin le plus populaire
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 int main() {
     vector<vector<string>> data = litTableau("donnees/liste_des_prenoms.txt", 4);

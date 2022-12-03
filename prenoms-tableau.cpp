@@ -19,6 +19,8 @@ vector<vector<string>> tableauTest = {
 
 /** Affiche le contenu d'un tableau de chaînes à deux dimensions
  * @param tableau un tableau à deux dimensions
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 void afficheTableau(vector<vector<string>> tableau) {
     for (int i = 0; i < tableau.size(); i++) {
@@ -41,6 +43,8 @@ void testAfficheTableau() {
   * de colonnes séparées par des espaces
  * @param nb_colonnes le nombre de colonnes du fichier
  * @return un tableau de chaines de caractères à deux dimensions
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 vector<vector<string>> litTableau(string nom_fichier, int nb_colonnes) {
     ifstream fichier;
@@ -77,6 +81,8 @@ void testLitTableau() {
  * @param t un tableau 2D de chaines de caractères
  * @param i un numéro de colonne
  * @return la colonne j, représentée par un vecteur de chaines de caractères
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 vector<string> colonne(vector<vector<string>> t, int j) {
     vector<string> tableau;
@@ -96,6 +102,8 @@ void testColonne() {
 /** Convertit un tableau de chaines de caractères en un tableau d'entiers
  * @param t, un vecteur de chaines de caractères
  * @return un vecteur d'entiers
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 vector<int> conversionInt(vector<string> t) {
     vector<int> resultat = vector<int>(t.size());
@@ -146,6 +154,8 @@ int indiceMax(vector<int> t) {
  * @param valeur, une chaine de caractères correspondant au critère
  * @return un tableau de données ne contenant que les lignes de t telles
  *  que la colonne j ait la valeur correspondant au critère
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 vector<vector<string>> selectLignes(vector<vector<string>> t, int j, string valeur) {
     vector<vector<string>> tableau;
@@ -167,6 +177,8 @@ void testSelectLignes() {
  * demande à l'utilisateur un prénom et calcule et affiche
  * - le nombre de garçons et filles à qui l'on a donné ce prénom
  * - la meilleure année pour ce prénom pour les garçons et filles
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 int main() {
     testAfficheTableau();

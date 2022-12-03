@@ -40,8 +40,11 @@ make mariage-complet-2
 make tableau-donnees-avance-test
 make mariage-complet-3
 make prenoms-tableau-avance
-info-111 g++ prenoms-csv.cpp -o prenoms.csv
+info-111 g++ prenoms-csv.cpp -o prenoms-csv
 make tableau-lecture-csv-test
+make arbres-hauteur
+make arbres-platanus
+make actes-civils
 
 +++
 
@@ -60,3 +63,6 @@ Commandes d'exécution:
 ./prenoms-tableau-avance
 ./prenoms-csv
 ./tableau-lecture-csv-test
+./arbres-hauteur
+./arbres-platanus
+./actes-civils

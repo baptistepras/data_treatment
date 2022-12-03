@@ -6,24 +6,35 @@ using namespace std;
 
 /** Affiche le contenu d'un tableau de chaînes à deux dimensions
  * @param tableau un tableau à deux dimensions
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 void afficheTableau(vector<vector<string>> tableau);
 
 /** Moyenne d'un tableau
  * @param t un tableau d'entiers
  * @result la moyenne de ces entiers
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
+ * Raison: Fonction triviale
  **/
 int moyenne(vector<int> t);
 
 /** Somme d'un tableau
  * @param t un tableau d'entiers
  * @result la somme de ces entiers
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
+ * Raison: Fonction triviale
  **/
 int somme(vector<int> t);
 
 /** Renvoie l'indice de la valeur maximale du tableau
  * @param t, un tableau d'entiers
  * @return l'indice de la valeur maximale ou -1 si le tableau est vide
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
+ * Raison: Fonction triviale
  **/
 int indiceMax(vector<int> t);
 
@@ -34,6 +45,8 @@ int indiceMax(vector<int> t);
  * @param valeur, une chaine de caractères correspondant au critère
  * @return un tableau de données ne contenant que les lignes de t telles
  *  que la colonne j ait la valeur correspondant au critère
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 vector<vector<string>> selectLignes(vector<vector<string>> t, int j, string valeur);
 
@@ -41,6 +54,8 @@ vector<vector<string>> selectLignes(vector<vector<string>> t, int j, string vale
  * @param t un tableau 2D de chaines de caractères
  * @param i un numéro de colonne
  * @return la colonne j, représentée par un vecteur de chaines de caractères
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 vector<string> colonne(vector<vector<string>> t, int j);
 

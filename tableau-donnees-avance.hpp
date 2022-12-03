@@ -8,6 +8,8 @@ using namespace std;
  * @param valeur une chaine de caractères
  * @return renvoie l'indice de la valeur dans la chaine ou -1 si la
  *  chaine est absente
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 int chercheIndice(vector<string> t, string valeur);
 
@@ -27,6 +29,8 @@ vector<string> distinct(vector<vector<string>> data, int j);
  * @param j2 l'indice de la colonne dont on veut faire les sommes groupées
  * @return un tableau d'entiers t tel que t[indice] contient la somme de data[i][j2]
  *  sur toutes les lignes telles que data[i][j1] == valeurs[indice]
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 100%
  **/
 vector<int> groupByInt(vector<vector<string>> data, vector<string> valeurs, int j1, int j2);
 
@@ -38,18 +42,26 @@ vector<int> groupByInt(vector<vector<string>> data, vector<string> valeurs, int 
  * @param j2 l'indice de la colonne dont on veut faire les sommes groupées
  * @return un tableau de double t tel que t[indice] contient la somme de data[i][j2]
  *  sur toutes les lignes telles que data[i][j1] == valeurs[indice]
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 95%
+ * Raison: J'ai un doute sur la bonne conversion des nombres en double à cause la fonction conversionDouble
  **/
 vector<double> groupByDouble(vector<vector<string>> data, vector<string> valeurs, int j1, int j2);
 
 /** Conversion d'un vecteur de chaînes de caractères en vecteur de doubles
  * @param t un vecteur de chaînes de caractères
  * @return le vecteur, converti en vecteur de doubles
+ * Auteur: Baptiste Pras
+ * Degré de confiance: 90%
+ * Raison: J'ai un doute sur le bon fonctionnement de la méthode imposée pour la conversion double, qui n'ai pas ma méthode de 
+ * prédilection que j'aurais naturellement utilisée
  **/
 vector<double> conversionDouble(vector<string> t);
 
 /** Conversion en vecteur de valeurs de type T
  * @param t un vecteur de chaînes de caractères
  * @return le vecteur, converti en vecteur de T
+ * PAS IMPLANTEE
  **/
 template<class T>
 vector<T> conversion(vector<string> t);
@@ -62,6 +74,7 @@ vector<T> conversion(vector<string> t);
  * @param j2 l'indice de la colonne dont on veut faire les sommes groupées
  * @return un tableau (de type T) t tel que t[indice] contient la somme de data[i][j2]
  *  sur toutes les lignes telles que data[i][j1] == valeurs[indice]
+ * PAS IMPLANTEE
  **/
 template<class T>
 vector<T> groupBy(vector<vector<string>> data, vector<string> valeurs, int j1, int j2);
