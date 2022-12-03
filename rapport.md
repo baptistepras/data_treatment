@@ -55,8 +55,7 @@ kernelspec:
               J'ai eu quelques difficultés à coder la fonction groupByInt qui m'a demandé de schématiser toutes les 
               nombreuses données que j'avais dans chaque variable et comment je devais les traiter pour arriver au 
               résultat final voulu
-              Pour le 6), je ne sais pas ce qu'est une template et ne comprend par conséquent pas ce qui m'est 
-              demandé ici
+              Pour le 6), je n'arrive pas à schématiser comment se passer du type pour créer une template
 
 - Exercice 7: entièremment complété, compile et fonctionne correctement
               prenoms-csv est le même programme que prenoms mais lit ses données depuis un fichier CSV plutôt que txt
