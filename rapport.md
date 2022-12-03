@@ -104,6 +104,11 @@ kernelspec:
                la SNCF. J'ai choisi de prendre seulement les lignes de parapluies, puis de compter 
                combien de lignes correspondaient à chaque gare en utilisant les fonctions existantes
 
+- Exercice 13: entièremment complété, compile et fonctionne correctement
+               Donne l'arrondissement avec le plus de trafic dans les stations métro / RER en se servant 
+               des fonctions déjà implantées précédemment et du fichier du trafic par station fourni par 
+               la RATP
+
 +++
 
 ## Démonstration
@@ -157,6 +162,7 @@ make arbres-platanus
 make actes-civils
 make voitures
 make objets-trouves
+make metro
 
 Commandes d'exécution:
 ./mariage-total
@@ -178,6 +184,7 @@ Commandes d'exécution:
 ./actes-civils
 ./voitures
 ./objets-trouves
+./metro
 
 +++ {"tags": [], "jp-MarkdownHeadingCollapsed": true}
 

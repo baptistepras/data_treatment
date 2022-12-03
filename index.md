@@ -47,6 +47,7 @@ make arbres-platanus
 make actes-civils
 make voitures
 make objets-trouves
+make metro
 
 +++
 
@@ -70,3 +71,4 @@ Commandes d'exécution:
 ./actes-civils
 ./voitures
 ./objets-trouves
+./metro
