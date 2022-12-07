@@ -133,10 +133,8 @@ Je souhaiterais montrer les programmes suivants:
 - Exercice 6: les programmes tableau-donnees-avance et prenoms-tableau-avance me paraissent être intéressants 
               tant dans la façon de créer les fonctions pour lire les tableaux que dans l'application de ces 
               dernières pour en ressortir les données voulues
-- Exercice 9: les programmes arbres-platanus et arbres-hauteur qui fonctionnent sont un bon exemple d'application de 
-              toutes nos fonctions précédemment créées. Le programme actes-civils, bien qu'ayant une erreur identifiée, est 
-              aussi un très bon exemple d'une manipulation plus complexe liée à un tableau avec plus de données
-  
+- Exercice 7: le programme litTableauCSV permet de comprendre comment on gère la lecture de données
+
 - Exercice 11: exercice le plus difficile m'ayant été donnée de faire dans ce TP pour ma part. Il permet 
                de montrer une application complexe de tout un tas de données dans un tableau, ainsi que 
                la création de nouvelles données qu'on juge manquantes et de vérifier la pertinence des 
