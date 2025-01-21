@@ -16,4 +16,4 @@ Do `./name_of_file` to start the program (for example, do `./voitures`).
 
 actes-civils.cpp is glitched and will do a core dumped. It was glitched back then and wasn't modified since.
 
-To execute `objets-trouves`, you will need to go find `objets-trouves-restitution.csv.gz` first and put it back to a csv file. The csv file is 101MB, therefore too big to be uploaded here.
+To execute `objets-trouves`, you will need to go find `objets-trouves-restitution.csv.gz` in `donnees` first and put it back to a csv file. The csv file is 101MB, therefore too big to be uploaded here.
