@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.1
+    jupytext_version: 1.14.5
 kernelspec:
   display_name: C++17
   language: C++17
@@ -207,8 +207,6 @@ Je souhaiterais montrer les programmes suivants:
 ```
 
 ```{code-cell}
-:tags: []
-
 ! ./mariage-complet-3
 ```
 
@@ -324,7 +322,7 @@ Commandes d'exécution:
 ./metro
 ./subventions
 
-+++ {"tags": [], "jp-MarkdownHeadingCollapsed": true}
++++ {"jp-MarkdownHeadingCollapsed": true}
 
 ## Organisation du travail
 

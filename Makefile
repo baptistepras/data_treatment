@@ -12,9 +12,18 @@ PROGRAMS= mariage-total mariage-samedi \
 	getline-exemple prenoms-csv \
 	tableau-lecture-csv-test \
 	arbres-hauteur arbres-platanus \
-	actes-civils
+	actes-civils \
+    voitures \
+    metro \
+    objets-trouves \
+    subventions
 
 all: $(PROGRAMS)
+
+voitures: voitures.o
+metro: metro.o
+objets-trouves: objets-trouves.o
+subventions: subventions.o
 
 tableau-donnees-test:     tableau-donnees.o tableau-donnees-test.o
 tableau-lecture-test:     tableau-lecture.o tableau-lecture-test.o

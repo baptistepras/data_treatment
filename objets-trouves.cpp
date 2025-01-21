@@ -1,3 +1,5 @@
+#include <stdexcept>
+/** @file **/
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -14,7 +16,7 @@ vector<string> colonne(vector<vector<string>> t, int j) {
     return tableau;
 }
 
-vector<string> distinct(vector<vector<string>> data, int j) {
+vector<string> distinct2(vector<vector<string>> data, int j) {
     vector<string> tableau;
     for (vector<string> tab : data) { // pour chaque ligne du tableau si la valeur n'a pas déjà été ajoutée
         if (chercheIndice(tableau, tab[j]) == -1)
@@ -89,7 +91,7 @@ int main() {
     // données du site de la SCNF
     vector<vector<string>> data = litTableauCSV("donnees/objets-trouves-restitution.csv", 7);
     vector<vector<string>> lignes_parapluies = selectLignes(data, 5, "Parapluies");
-    vector<string> gares = distinct(lignes_parapluies, 2);
+    vector<string> gares = distinct2(lignes_parapluies, 2);
     vector<int> parapluies_par_gare = vector<int>(gares.size());
     for (int i = 0; i < gares.size(); i++)
         parapluies_par_gare[i] = 0;

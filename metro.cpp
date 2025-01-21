@@ -1,3 +1,5 @@
+#include <stdexcept>
+/** @file **/
 #include <iostream>
 #include <fstream>
 #include <sstream>
